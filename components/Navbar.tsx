@@ -6,8 +6,8 @@ const Navbar: FC = () => {
   const { darkTheme, setDarkTheme } = useDarkTheme();
 
   return (
-    <div className="w-full py-4 bg-gray-100 dark:bg-gray-700 shadow-md">
-      <div className="container mx-auto px-5 flex items-center justify-between dark:text-white text-black">
+    <div className="w-full bg-white dark:bg-gray-700 shadow-md">
+      <div className="container mx-auto p-5 flex items-center justify-between dark:text-white text-black">
         <h1 className="font-bold md:text-2xl">Where in the world?</h1>
         <div className="flex items-center gap-2 cursor-pointer md:text-xl" onClick={() => setDarkTheme(!darkTheme)}>
           {darkTheme ? (
