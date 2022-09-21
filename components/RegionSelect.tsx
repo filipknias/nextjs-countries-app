@@ -33,7 +33,7 @@ const RegionSelect: FC = () => {
   }, [listRef]);
 
   return (
-    <div ref={listRef} className="relative bg-white dark:bg-gray-700 shadow-sm border border-gray-100 dark:border-gray-600 px-6 py-3 rounded-sm dark:text-white">
+    <div ref={listRef} className="relative bg-white dark:bg-gray-700 shadow-sm border border-gray-100 dark:border-gray-600 px-6 py-3 rounded-sm">
       <div className="cursor-pointer flex items-center justify-between gap-3 text-sm md:text-md lg:text-lg" onClick={() => setListOpened(!listOpened)}>
         Filter by region
         <BsChevronDown />

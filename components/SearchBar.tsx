@@ -20,7 +20,7 @@ const SearchBar: FC = () => {
 
   return (
     <form 
-      className="bg-white dark:bg-gray-700 shadow-sm border border-gray-100 dark:border-gray-600 flex items-center gap-4 px-5 py-3 text-sm md:text-md lg:text-lg rounded-sm w-full md:w-2/3 lg:w-1/3 dark:text-white"
+      className="bg-white dark:bg-gray-700 shadow-sm border border-gray-100 dark:border-gray-600 flex items-center gap-4 px-5 py-3 text-sm md:text-md lg:text-lg rounded-sm w-full md:w-2/3 lg:w-1/3"
       onSubmit={handleSubmit}  
     >
       <BsSearch />

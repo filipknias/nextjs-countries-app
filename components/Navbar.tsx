@@ -8,7 +8,7 @@ const Navbar: FC = () => {
 
   return (
     <div className="w-full bg-white dark:bg-gray-700 shadow-md">
-      <div className="container mx-auto p-5 flex items-center justify-between dark:text-white text-black">
+      <div className="container mx-auto p-5 flex items-center justify-between">
         <Link href="/">
           <h1 className="font-bold md:text-2xl cursor-pointer">Where in the world?</h1>
         </Link>

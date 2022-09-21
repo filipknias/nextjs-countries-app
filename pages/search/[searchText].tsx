@@ -19,7 +19,7 @@ const SearchPage: NextPage<Props> = ({ countries }) => {
         </>
       </ButtonLink>
       {countries ? <CountriesList countries={countries} /> : (
-        <h1 className="text-center text-xl font-bold dark:text-white">No countries found</h1>
+        <h1 className="text-center text-xl font-bold">No countries found</h1>
       )}
     </>
   )

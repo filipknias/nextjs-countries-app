@@ -9,7 +9,7 @@ const Country: FC<Props> = ({ country }) => {
   return (
     <div className="bg-white dark:bg-gray-700 rounded-md shadow-md">
       <img src={country.flags.svg} alt={country.name.common} className="w-full h-1/2 object-cover" />
-      <div className="p-4 flex flex-col justify-center gap-5 dark:text-white">
+      <div className="p-4 flex flex-col justify-center gap-5">
         <h1 className="font-bold text-lg">{country.name.common}</h1>
         <ul className="flex flex-col gap-2">
           <li>
