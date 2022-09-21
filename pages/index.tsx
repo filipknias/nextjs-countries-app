@@ -1,9 +1,24 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next';
+import axios from 'axios';
+import { Country } from '../types/api';
+import CountriesList from '../components/CountriesList';
 
-const Home: NextPage = () => {
+interface Props {
+  countries: Country[];
+}
+
+const Home: NextPage<Props> = ({ countries }) => {
   return (
-    <div>Content</div>
+    <CountriesList countries={countries} />
   )
 }
 
-export default Home
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data: countries } = await axios.get('https://restcountries.com/v3.1/all');
+
+  return {
+    props: { countries },
+  }
+};
