@@ -1,4 +1,4 @@
-import { FC, useState, FormEvent } from 'react';
+import { FC, useState, FormEvent, useEffect } from 'react';
 import { BsSearch } from 'react-icons/bs';
 import { useRouter } from 'next/router';
 
@@ -11,6 +11,12 @@ const SearchBar: FC = () => {
     if (searchText === '') return;
     router.push(`/search/${searchText}`);
   }
+
+  useEffect(() => {
+    // Clear search text on url change
+    if (router.route === '/search/[searchText]') return;
+    setSearchText('');
+  }, [router.route]);
 
   return (
     <form 
