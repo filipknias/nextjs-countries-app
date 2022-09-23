@@ -43,10 +43,12 @@ const CountryPage: NextPage<Props> = ({ country }) => {
                 <span className="font-medium text-md">Capital: </span>
                 <span className="font-light text-md">{country.capital}</span>
               </div>
-              <div>
-                <span className="font-medium text-md">Top Level Domain: </span>
-                <span className="font-light text-md">{country.tld[0]}</span>
-              </div>
+              {country.tld && (
+                <div>
+                  <span className="font-medium text-md">Top Level Domain: </span>
+                  <span className="font-light text-md">{country.tld[0]}</span>
+                </div>
+              )}
               <div>
                 <span className="font-medium text-md">Currency: </span>
                 <span className="font-light text-md">{Object.values(country.currencies)[0].name}</span>
