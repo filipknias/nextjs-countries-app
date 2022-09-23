@@ -3,14 +3,28 @@ import axios from 'axios';
 import { Country } from '../../types/api';
 import ButtonLink from '../../components/ButtonLink';
 import { BsChevronLeft } from 'react-icons/bs';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 interface Props {
   country: Country|null;
 }
 
 const CountryPage: NextPage<Props> = ({ country }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (country === null) router.push('/');
+  }, [country]);
+
   return (
     <>
+      {country && (
+        <Head>
+          <title>{country.name.common}</title>
+        </Head>
+      )}
       <ButtonLink href="/">
         <>
           <BsChevronLeft />
