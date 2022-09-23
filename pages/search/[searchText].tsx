@@ -4,14 +4,21 @@ import { Country } from '../../types/api';
 import CountriesList from '../../components/CountriesList';
 import ButtonLink from '../../components/ButtonLink';
 import { BsFillGridFill } from 'react-icons/bs';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface Props {
   countries: Country[]|null;
 }
 
 const SearchPage: NextPage<Props> = ({ countries }) => {
+  const router = useRouter();
+
   return (
     <>
+      <Head>
+        <title>Results for {router.query.searchText}</title>
+      </Head>
       <ButtonLink href="/">
         <>
           <BsFillGridFill />
