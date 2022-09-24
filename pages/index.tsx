@@ -2,6 +2,7 @@ import type { NextPage, GetStaticProps } from 'next';
 import axios from 'axios';
 import { Country } from '../types/api';
 import CountriesList from '../components/CountriesList';
+import Head from 'next/head';
 
 interface Props {
   countries: Country[];
@@ -9,7 +10,12 @@ interface Props {
 
 const Home: NextPage<Props> = ({ countries }) => {
   return (
-    <CountriesList countries={countries} />
+    <>
+      <Head>
+        <title>Countries</title>
+      </Head>
+      <CountriesList countries={countries} />
+    </>
   )
 }
 
